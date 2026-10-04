@@ -1,5 +1,6 @@
 package com.myledger.app
 
+import androidx.compose.material3.ExperimentalMaterial3Api
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -27,6 +28,7 @@ import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
+@OptIn(ExperimentalMaterial3Api::class)
 class MainActivity:ComponentActivity(){
     private val vm:MainViewModel by viewModels{MainViewModel.Factory((application as MyLedgerApplication).repository)}
     private val permissions=registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()){}
